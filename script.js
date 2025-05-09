@@ -2,19 +2,22 @@ function vote(answer) {
   const img = document.getElementById('mainImage');
   const msg = document.getElementById('responseMessage');
 
-  if (answer === 'tak') {
+   if (answer === 'tak') {
+    // Przekierowanie na stronę ze szczegółami
     window.location.href = "szczegoly.html";
   } else {
-    img.src = "placzace_postacie.png"; // Podmień na właściwy plik
+    const img = document.getElementById('mainImage');
+    const msg = document.getElementById('responseMessage');
+    img.src = "sad.png"; // Płacząca wersja
     msg.textContent = "Będziemy tęsknić 😢";
   }
 
-  // Zapisz do Google Sheets
-  fetch("https://script.google.com/macros/s/AKfycbwLhcFzadyD6L6gMaF1R1s4JtCMOquXzMXu2fwIqbrxLZtupjYmWEpWewu3GApVc8X5/exec
-", {
+  // Zapis do Google Sheets
+  fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
     method: "POST",
     body: JSON.stringify({ odpowiedz: answer }),
-    headers: {
+  });
+}
       "Content-Type": "application/json"
     }
   }).catch(err => console.error("Błąd zapisu:", err));
