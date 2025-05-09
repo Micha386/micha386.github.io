@@ -10,7 +10,7 @@ function vote(answer) {
   }
 
   // Zapisz do Google Sheets
-  fetch("https://script.google.com/macros/s/AKfycbxYm7NI0G_dII2JiA4NGFCyKXeOo4f9Kq1lZKMtG1wTN_CVzFcEQpe0WkvtkqT4hxQ0/exec
+  fetch("https://script.google.com/macros/s/AKfycbwLhcFzadyD6L6gMaF1R1s4JtCMOquXzMXu2fwIqbrxLZtupjYmWEpWewu3GApVc8X5/exec
 ", {
     method: "POST",
     body: JSON.stringify({ odpowiedz: answer }),
