@@ -1,32 +1,43 @@
-
 body {
-  font-family: 'Verdana', sans-serif;
-  background-color: #f0e8d9;
+  background-color: #e4f0d8;
+  font-family: 'Press Start 2P', monospace;
   text-align: center;
+  margin: 0;
   padding: 2em;
 }
+
 .game {
-  background: #fff9f2;
-  padding: 2em;
-  border-radius: 20px;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 800px;
+  margin: 0 auto;
 }
-.sprites {
-  width: 200px;
-  margin-bottom: 1em;
+
+.main-image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
 }
+
+.buttons {
+  margin-top: 1em;
+}
+
 button {
-  margin: 1em;
-  padding: 0.5em 1.5em;
-  font-size: 1.2em;
+  font-family: 'Press Start 2P', monospace;
+  margin: 0.5em;
+  padding: 1em 2em;
+  font-size: 1em;
+  background-color: #fceabb;
+  border: 3px solid #5e3d1f;
+  color: #3e2d0f;
   border-radius: 12px;
-  background-color: #8fc490;
-  border: none;
-  color: white;
   cursor: pointer;
 }
+
 button:hover {
-  background-color: #72a575;
+  background-color: #ffe9a9;
+}
+
+#responseMessage {
+  margin-top: 1em;
+  font-size: 1.1em;
 }
