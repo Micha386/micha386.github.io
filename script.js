@@ -13,12 +13,10 @@ function vote(answer) {
   }
 
   // Zapis do Google Sheets
-  fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
-    method: "POST",
-    body: JSON.stringify({ odpowiedz: answer }),
-  });
-}
-      "Content-Type": "application/json"
-    }
-  }).catch(err => console.error("Błąd zapisu:", err));
-}
+ fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ odpowiedz: answer }),
+}).catch(err => console.error("Błąd zapisu:", err));
