@@ -7,7 +7,6 @@ function vote(answer) {
     window.location.href = "szczegoly.html";
   } else {
     img.src = "sad.png"; // Płacząca wersja
-    msg.textContent = "Będziemy tęsknić 😢";
   }
 
   // Zapis do Google Sheets
